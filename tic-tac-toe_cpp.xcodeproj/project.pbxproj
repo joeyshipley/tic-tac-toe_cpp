@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AE029BF1624516000392C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029BE1624516000392C62 /* main.cpp */; };
+		6AE029C11624516000392C62 /* tic_tac_toe_cpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */; };
+		6AE029CF1624519700392C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029CE1624519700392C62 /* main.cpp */; };
+		6AE029D11624519700392C62 /* Specs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6AE029D01624519700392C62 /* Specs.1 */; };
+		6AE029D7162451C400392C62 /* SimpleMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029D5162451C400392C62 /* SimpleMath.cpp */; };
+		6AE029D8162451C400392C62 /* SimpleMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029D5162451C400392C62 /* SimpleMath.cpp */; };
+		6AE029E61624540000392C62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE029DC162452F100392C62 /* OpenGL.framework */; };
+		6AE029E71624540E00392C62 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE029DE162452F800392C62 /* GLUT.framework */; };
+		6AE029EE1624551900392C62 /* SimpleMathSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029EC1624551900392C62 /* SimpleMathSpecs.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6AE029B81624516000392C62 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6AE029C11624516000392C62 /* tic_tac_toe_cpp.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		6AE029C91624519700392C62 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6AE029D11624519700392C62 /* Specs.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6AE029BA1624516000392C62 /* tic-tac-toe_cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "tic-tac-toe_cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE029BE1624516000392C62 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = tic_tac_toe_cpp.1; sourceTree = "<group>"; };
+		6AE029CB1624519700392C62 /* Specs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Specs; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE029CE1624519700392C62 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6AE029D01624519700392C62 /* Specs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Specs.1; sourceTree = "<group>"; };
+		6AE029D5162451C400392C62 /* SimpleMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMath.cpp; sourceTree = "<group>"; };
+		6AE029D6162451C400392C62 /* SimpleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMath.h; sourceTree = "<group>"; };
+		6AE029DC162452F100392C62 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6AE029DE162452F800392C62 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		6AE029EC1624551900392C62 /* SimpleMathSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMathSpecs.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AE029B71624516000392C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE029E71624540E00392C62 /* GLUT.framework in Frameworks */,
+				6AE029E61624540000392C62 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE029C81624519700392C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AE029AF1624516000392C62 = {
+			isa = PBXGroup;
+			children = (
+				6AE029DE162452F800392C62 /* GLUT.framework */,
+				6AE029DC162452F100392C62 /* OpenGL.framework */,
+				6AE029BD1624516000392C62 /* tic-tac-toe_cpp */,
+				6AE029CD1624519700392C62 /* Specs */,
+				6AE029BB1624516000392C62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AE029BB1624516000392C62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AE029BA1624516000392C62 /* tic-tac-toe_cpp */,
+				6AE029CB1624519700392C62 /* Specs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AE029BD1624516000392C62 /* tic-tac-toe_cpp */ = {
+			isa = PBXGroup;
+			children = (
+				6AE029DB162452CB00392C62 /* AI */,
+				6AE029DA162452C200392C62 /* Engine */,
+				6AE029BE1624516000392C62 /* main.cpp */,
+				6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */,
+				6AE029D5162451C400392C62 /* SimpleMath.cpp */,
+				6AE029D6162451C400392C62 /* SimpleMath.h */,
+			);
+			path = "tic-tac-toe_cpp";
+			sourceTree = "<group>";
+		};
+		6AE029CD1624519700392C62 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				6AE029EB1624550300392C62 /* Engine */,
+				6AE029EA162454FD00392C62 /* AI */,
+				6AE029CE1624519700392C62 /* main.cpp */,
+				6AE029D01624519700392C62 /* Specs.1 */,
+				6AE029EC1624551900392C62 /* SimpleMathSpecs.cpp */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		6AE029DA162452C200392C62 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		6AE029DB162452CB00392C62 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
+		6AE029EA162454FD00392C62 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
+		6AE029EB1624550300392C62 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AE029B91624516000392C62 /* tic-tac-toe_cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE029C41624516000392C62 /* Build configuration list for PBXNativeTarget "tic-tac-toe_cpp" */;
+			buildPhases = (
+				6AE029B61624516000392C62 /* Sources */,
+				6AE029B71624516000392C62 /* Frameworks */,
+				6AE029B81624516000392C62 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tic-tac-toe_cpp";
+			productName = "tic-tac-toe_cpp";
+			productReference = 6AE029BA1624516000392C62 /* tic-tac-toe_cpp */;
+			productType = "com.apple.product-type.tool";
+		};
+		6AE029CA1624519700392C62 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE029D21624519700392C62 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				6AE029C71624519700392C62 /* Sources */,
+				6AE029C81624519700392C62 /* Frameworks */,
+				6AE029C91624519700392C62 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 6AE029CB1624519700392C62 /* Specs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AE029B11624516000392C62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Joey Shipley";
+			};
+			buildConfigurationList = 6AE029B41624516000392C62 /* Build configuration list for PBXProject "tic-tac-toe_cpp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6AE029AF1624516000392C62;
+			productRefGroup = 6AE029BB1624516000392C62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AE029B91624516000392C62 /* tic-tac-toe_cpp */,
+				6AE029CA1624519700392C62 /* Specs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AE029B61624516000392C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE029BF1624516000392C62 /* main.cpp in Sources */,
+				6AE029D7162451C400392C62 /* SimpleMath.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE029C71624519700392C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE029CF1624519700392C62 /* main.cpp in Sources */,
+				6AE029D8162451C400392C62 /* SimpleMath.cpp in Sources */,
+				6AE029EE1624551900392C62 /* SimpleMathSpecs.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6AE029C21624516000392C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6AE029C31624516000392C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6AE029C51624516000392C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6AE029C61624516000392C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6AE029D31624519700392C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = Specs/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/joeyshipley/Documents/projects/_tools/;
+			};
+			name = Debug;
+		};
+		6AE029D41624519700392C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = Specs/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/joeyshipley/Documents/projects/_tools/;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AE029B41624516000392C62 /* Build configuration list for PBXProject "tic-tac-toe_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE029C21624516000392C62 /* Debug */,
+				6AE029C31624516000392C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AE029C41624516000392C62 /* Build configuration list for PBXNativeTarget "tic-tac-toe_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE029C51624516000392C62 /* Debug */,
+				6AE029C61624516000392C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AE029D21624519700392C62 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE029D31624519700392C62 /* Debug */,
+				6AE029D41624519700392C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AE029B11624516000392C62 /* Project object */;
+}

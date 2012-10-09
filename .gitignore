@@ -27,3 +27,7 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# XCODE #
+#########
+*.xcuserstate

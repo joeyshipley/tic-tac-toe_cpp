@@ -6,16 +6,14 @@
 
 int main(int argc, char **argv)
 {
-    ThreeByThreeBoard threeByThreeBoard;
-    std::cout << "isReal: " << threeByThreeBoard.IsRealBoard();
-    std::cout << "\n";
-    
     Board * board = new ThreeByThreeBoard();
-    std::cout << "isReal from Interface: " << board->IsRealBoard();
-    std::cout << "\n";
-
-    GameEngine * engine = new GameEngine(board);
-    engine->Start();
+    GameEngine engine = * new GameEngine(board);
+    
+    engine.Start();
+    engine.PerformTurn(1);
+    engine.PerformTurn(2);
+    
+    delete board;
     
     return 0;
 }

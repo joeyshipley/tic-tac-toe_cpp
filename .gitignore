@@ -30,4 +30,4 @@ Thumbs.db
 
 # XCODE #
 #########
-*.xcuserstate
+xcuserdata/

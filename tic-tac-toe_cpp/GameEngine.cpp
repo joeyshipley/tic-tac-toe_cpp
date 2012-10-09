@@ -1,4 +1,5 @@
 #include "GameEngine.h"
+#include "Rules.h"
 
 GameEngine::GameEngine(Board * board)
 {
@@ -7,5 +8,13 @@ GameEngine::GameEngine(Board * board)
 
 void GameEngine::Start()
 {
-    std::cout << "From private board, isReal: " << this->board->IsRealBoard();
+    board->Initialize();
+}
+
+Game GameEngine::PerformTurn(int input)
+{
+    board->Apply(input, Rules::PLAYER);
+    
+    Game game;
+    return game;
 }

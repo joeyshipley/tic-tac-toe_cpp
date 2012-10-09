@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Board.h"
+#include "Game.h"
 
 class GameEngine
 {
@@ -12,6 +13,7 @@ class GameEngine
     public:
         GameEngine(Board * board);
         void Start();
+        Game PerformTurn(int input);
 };
 
 #endif /* defined(__tic_tac_toe_cpp__GameEngine__) */

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
+		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
+		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
+		6A3B37BD1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
+		6A3B37C0162477E600A0086E /* FakeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BE162477E600A0086E /* FakeBoard.cpp */; };
+		6A3B37C1162477E600A0086E /* FakeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BE162477E600A0086E /* FakeBoard.cpp */; };
 		6AE029BF1624516000392C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029BE1624516000392C62 /* main.cpp */; };
 		6AE029C11624516000392C62 /* tic_tac_toe_cpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */; };
 		6AE029CF1624519700392C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029CE1624519700392C62 /* main.cpp */; };
@@ -16,6 +22,7 @@
 		6AE029E61624540000392C62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE029DC162452F100392C62 /* OpenGL.framework */; };
 		6AE029E71624540E00392C62 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE029DE162452F800392C62 /* GLUT.framework */; };
 		6AE029EE1624551900392C62 /* SimpleMathSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029EC1624551900392C62 /* SimpleMathSpecs.cpp */; };
+		6AE02A40162464F700392C62 /* GameEngineSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +49,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
+		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
+		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeByThreeBoard.cpp; sourceTree = "<group>"; };
+		6A3B37BB1624772E00A0086E /* ThreeByThreeBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeByThreeBoard.h; sourceTree = "<group>"; };
+		6A3B37BE162477E600A0086E /* FakeBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeBoard.cpp; sourceTree = "<group>"; };
+		6A3B37BF162477E600A0086E /* FakeBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBoard.h; sourceTree = "<group>"; };
 		6AE029BA1624516000392C62 /* tic-tac-toe_cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "tic-tac-toe_cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE029BE1624516000392C62 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = tic_tac_toe_cpp.1; sourceTree = "<group>"; };
@@ -53,6 +67,7 @@
 		6AE029DC162452F100392C62 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		6AE029DE162452F800392C62 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6AE029EC1624551900392C62 /* SimpleMathSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMathSpecs.cpp; sourceTree = "<group>"; };
+		6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngineSpecs.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A3B37B516246EA400A0086E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6A3B37BE162477E600A0086E /* FakeBoard.cpp */,
+				6A3B37BF162477E600A0086E /* FakeBoard.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		6AE029AF1624516000392C62 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +122,7 @@
 		6AE029BD1624516000392C62 /* tic-tac-toe_cpp */ = {
 			isa = PBXGroup;
 			children = (
+				6AE02A39162464AA00392C62 /* Models */,
 				6AE029DB162452CB00392C62 /* AI */,
 				6AE029DA162452C200392C62 /* Engine */,
 				6AE029BE1624516000392C62 /* main.cpp */,
@@ -111,6 +136,8 @@
 		6AE029CD1624519700392C62 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				6A3B37B516246EA400A0086E /* Helpers */,
+				6AE02A3A162464B300392C62 /* Models */,
 				6AE029EB1624550300392C62 /* Engine */,
 				6AE029EA162454FD00392C62 /* AI */,
 				6AE029CE1624519700392C62 /* main.cpp */,
@@ -123,6 +150,8 @@
 		6AE029DA162452C200392C62 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				6A3B37AB162465A800A0086E /* GameEngine.cpp */,
+				6A3B37AC162465A800A0086E /* GameEngine.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -144,8 +173,26 @@
 		6AE029EB1624550300392C62 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */,
 			);
 			name = Engine;
+			sourceTree = "<group>";
+		};
+		6AE02A39162464AA00392C62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A3B37B116246C7000A0086E /* Board.h */,
+				6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */,
+				6A3B37BB1624772E00A0086E /* ThreeByThreeBoard.h */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6AE02A3A162464B300392C62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +266,9 @@
 			files = (
 				6AE029BF1624516000392C62 /* main.cpp in Sources */,
 				6AE029D7162451C400392C62 /* SimpleMath.cpp in Sources */,
+				6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */,
+				6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */,
+				6A3B37C0162477E600A0086E /* FakeBoard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +279,10 @@
 				6AE029CF1624519700392C62 /* main.cpp in Sources */,
 				6AE029D8162451C400392C62 /* SimpleMath.cpp in Sources */,
 				6AE029EE1624551900392C62 /* SimpleMathSpecs.cpp in Sources */,
+				6AE02A40162464F700392C62 /* GameEngineSpecs.cpp in Sources */,
+				6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */,
+				6A3B37BD1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */,
+				6A3B37C1162477E600A0086E /* FakeBoard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,10 +5,10 @@ using namespace igloo;
 
 Context(WhenAdding8And12)
 {
-  Spec(ItReturns20)
-  {
-    SimpleMath math;
-    int result = math.Add(8, 12);
-    Assert::That(result, Is().EqualTo(20));
-  } 
+    Spec(ItReturns20)
+    {
+        SimpleMath math;
+        int result = math.Add(8, 12);
+        Assert::That(result, Is().EqualTo(20));
+    } 
 };

@@ -18,6 +18,10 @@
 		6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
 		6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
 		6A11DB791625F2F500719A79 /* FakeInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */; };
+		6A11DB7C1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */; };
+		6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */; };
+		6A11DB801625FFFB00719A79 /* GameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */; };
+		6A11DB871626305300719A79 /* FakeGameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */; };
 		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
@@ -70,6 +74,12 @@
 		6A11DB741625F1C000719A79 /* PlayerInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInputValidator.h; sourceTree = "<group>"; };
 		6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeInputValidator.cpp; sourceTree = "<group>"; };
 		6A11DB781625F2F500719A79 /* FakeInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeInputValidator.h; sourceTree = "<group>"; };
+		6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStatusCheckerSpecs.cpp; sourceTree = "<group>"; };
+		6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStatusChecker.cpp; sourceTree = "<group>"; };
+		6A11DB7E1625FFF600719A79 /* GameStatusChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatusChecker.h; sourceTree = "<group>"; };
+		6A11DB8216262F7800719A79 /* GameStatusAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatusAlgorithm.h; sourceTree = "<group>"; };
+		6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeGameStatusChecker.cpp; sourceTree = "<group>"; };
+		6A11DB861626305300719A79 /* FakeGameStatusChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeGameStatusChecker.h; sourceTree = "<group>"; };
 		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
 		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -115,6 +125,8 @@
 				6A3B37BF162477E600A0086E /* FakeBoard.h */,
 				6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */,
 				6A11DB781625F2F500719A79 /* FakeInputValidator.h */,
+				6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */,
+				6A11DB861626305300719A79 /* FakeGameStatusChecker.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -174,6 +186,9 @@
 				6A11DB701625DF5B00719A79 /* InputValidator.h */,
 				6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */,
 				6A11DB741625F1C000719A79 /* PlayerInputValidator.h */,
+				6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */,
+				6A11DB7E1625FFF600719A79 /* GameStatusChecker.h */,
+				6A11DB8216262F7800719A79 /* GameStatusAlgorithm.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -197,6 +212,7 @@
 			children = (
 				6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */,
 				6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */,
+				6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -300,6 +316,7 @@
 				6A11DB5C1624AAFA00719A79 /* Cell.cpp in Sources */,
 				6A11DB641624BC4400719A79 /* Rules.cpp in Sources */,
 				6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
+				6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +336,9 @@
 				6A11DB6D1625DF4400719A79 /* InputValidatorSpecs.cpp in Sources */,
 				6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
 				6A11DB791625F2F500719A79 /* FakeInputValidator.cpp in Sources */,
+				6A11DB7C1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp in Sources */,
+				6A11DB801625FFFB00719A79 /* GameStatusChecker.cpp in Sources */,
+				6A11DB871626305300719A79 /* FakeGameStatusChecker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

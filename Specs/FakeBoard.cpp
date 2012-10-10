@@ -29,6 +29,16 @@ Cell FakeBoard::FindCell(int value)
     return returnsFromFindCellCall;
 }
 
+Cell FakeBoard::FindCellByCoordinates(int x, int y)
+{
+    return returnsFromFindCellCall;
+}
+
+bool FakeBoard::HasAvailableMoves()
+{
+    return false;
+}
+
 void FakeBoard::AndReturnsFromFindCell(Cell cell)
 {
     returnsFromFindCellCall = cell;

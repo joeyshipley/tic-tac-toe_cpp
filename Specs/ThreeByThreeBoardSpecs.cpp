@@ -7,30 +7,34 @@ using namespace igloo;
 
 Context(WhenThe3By3BoardIsInitialized)
 {
+    Board * board;
+    
+    void SetUp()
+    {
+        board = new ThreeByThreeBoard();
+        board->Initialize();
+    }
+    
+    void TearDown()
+    {
+        delete board;
+    }
+    
     Spec(ItHas9Cells)
     {
-        Board * board = new ThreeByThreeBoard();
-        board->Initialize();
         vector<Cell> cells = board->Cells();
-
         Assert::That(cells.size(), Is().EqualTo(9));
     }
 
     Spec(ItHasAFirstCellWithAValueOf1)
     {
-        Board * board = new ThreeByThreeBoard();
-        board->Initialize();
         vector<Cell> cells = board->Cells();
-
         Assert::That(cells.front().Value, Is().EqualTo(1));
     }
 
     Spec(ItHasALstCellWithAValueOf9)
     {
-        Board * board = new ThreeByThreeBoard();
-        board->Initialize();
         vector<Cell> cells = board->Cells();
-
         Assert::That(cells.back().Value, Is().EqualTo(9));
     }
 };
@@ -57,5 +61,36 @@ Context(WhenAskingTheBoardToApplyAnInputChoice)
         Cell cell = board->FindCell(1);
 
         Assert::That(cell.Owner, Is().EqualTo(Rules::PLAYER));
+    }
+};
+
+Context(WhenAskingTheBoardIfItHasAvailableMoves)
+{
+    Board * board;
+    
+    void SetUp()
+    {
+        board = new ThreeByThreeBoard();
+        board->Initialize();
+    }
+    
+    void TearDown()
+    {
+        delete board;
+    }
+    
+    Spec(ItLetsUsKnowWhenItDoesnt)
+    {
+        for(int i = 0; i < board->Cells().size(); i++)
+            board->Apply(i + 1, Rules::PLAYER);
+            
+        bool hasAvailableMoves = board->HasAvailableMoves();
+        Assert::That(hasAvailableMoves, Is().EqualTo(false));
+    }
+    
+    Spec(ItLetsUsKnowWhenItDoes)
+    {
+        bool hasAvailableMoves = board->HasAvailableMoves();
+        Assert::That(hasAvailableMoves, Is().EqualTo(true));
     }
 };

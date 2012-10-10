@@ -13,6 +13,8 @@ class FakeBoard : public Board
         virtual void Apply(int input, string owner);
         virtual vector<Cell> Cells();
         virtual Cell FindCell(int value);
+        virtual Cell FindCellByCoordinates(int x, int y);
+        virtual bool HasAvailableMoves();
         
     private:
         Cell returnsFromFindCellCall;

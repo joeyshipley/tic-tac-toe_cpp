@@ -9,8 +9,13 @@ class Cell
     public:
         int Value;
         string Owner;
+        int X;
+        int Y;
         bool IsValid;
+
+    public:
         Cell();
+        static Cell * Build(int value, int x, int y);
         static Cell * InvalidCell();
 };
 

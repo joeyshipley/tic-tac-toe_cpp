@@ -5,6 +5,7 @@ using namespace igloo;
 #include "Board.h"
 #include "FakeBoard.h"
 #include "FakeInputValidator.h"
+#include "FakeGameStatusChecker.h"
 #include "Game.h"
 
 Context(WhenStartingUpAGame)
@@ -14,71 +15,79 @@ Context(WhenStartingUpAGame)
         FakeBoard * fakeBoard = new FakeBoard();
         FakeInputValidator * fakeValidator = new FakeInputValidator();
         fakeValidator->AndReturnsForCheck(Rules::VALID);
-        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator);
+        FakeGameStatusChecker * fakeGameStatusChecker = new FakeGameStatusChecker();
+        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator, fakeGameStatusChecker);
 
         engine->Start();
         Assert::That(fakeBoard->InitializedTimesCalled, Is().EqualTo(true));
         
         delete fakeBoard;
+        delete fakeValidator;
+        delete fakeGameStatusChecker;
         delete engine;
     }
 };
 
 Context(WhenPerformingATurn)
 {
+    FakeBoard * fakeBoard;
+    FakeInputValidator * fakeValidator;
+    FakeGameStatusChecker * fakeGameStatusChecker;
+    GameEngine * engine;
+    
+    void SetUp()
+    {
+        fakeBoard = new FakeBoard();
+        fakeValidator = new FakeInputValidator();
+        fakeGameStatusChecker = new FakeGameStatusChecker();
+        engine = new GameEngine(fakeBoard, fakeValidator, fakeGameStatusChecker);
+    }
+    
+    void TearDown()
+    {
+        delete fakeBoard;
+        delete fakeValidator;
+        delete fakeGameStatusChecker;
+        delete engine;
+    }
+    
     Spec(ItReturnsTheGamesData)
     {
-        FakeBoard * fakeBoard = new FakeBoard();
-        FakeInputValidator * fakeValidator = new FakeInputValidator();
         fakeValidator->AndReturnsForCheck(Rules::VALID);
-        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator);
 
         Game game = engine->PerformTurn(1);
         Assert::That(game.Message, Is().EqualTo(""));
-        
-        delete fakeBoard;
-        delete engine;
     }
     
     Spec(ItChecksTheInputValidity)
     {
-        FakeBoard * fakeBoard = new FakeBoard();
-        FakeInputValidator * fakeValidator = new FakeInputValidator();
         fakeValidator->AndReturnsForCheck(Rules::VALID);
-        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator);
 
         engine->PerformTurn(1);
         Assert::That(fakeValidator->CheckTimesCalled, Is().EqualTo(1));
-                
-        delete fakeBoard;
-        delete engine;
+    }
+    
+    Spec(ItChecksIfTheGameIsOver)
+    {
+        fakeValidator->AndReturnsForCheck(Rules::VALID);
+
+        engine->PerformTurn(1);
+        Assert::That(fakeGameStatusChecker->CheckTimesCalled, Is().EqualTo(1));
     }
 
     Spec(ItSendsTheInputChoiceToTheBaordWhenThenInputIsValid)
     {
-        FakeBoard * fakeBoard = new FakeBoard();
-        FakeInputValidator * fakeValidator = new FakeInputValidator();
         fakeValidator->AndReturnsForCheck(Rules::VALID);
-        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator);
 
         engine->PerformTurn(1);
         Assert::That(fakeBoard->ApplyTimesCalled, Is().EqualTo(1));
-                
-        delete fakeBoard;
-        delete engine;
     }
 
     Spec(ItDoesNotSendTheInputChoiceToTheBaordWhenThenInputIsNotValid)
     {
-        FakeBoard * fakeBoard = new FakeBoard();
-        FakeInputValidator * fakeValidator = new FakeInputValidator();
         fakeValidator->AndReturnsForCheck(Rules::INVALID);
-        GameEngine * engine = new GameEngine(fakeBoard, fakeValidator);
 
         engine->PerformTurn(1);
         Assert::That(fakeBoard->ApplyTimesCalled, Is().EqualTo(0));
-                
-        delete fakeBoard;
-        delete engine;
     }
 };

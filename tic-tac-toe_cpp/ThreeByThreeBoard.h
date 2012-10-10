@@ -2,6 +2,8 @@
 #define __tic_tac_toe_cpp__ThreeByThreeBoard__
 
 #include <iostream>
+#include <vector>
+#include "Rules.h"
 #include "Board.h"
 #include "Cell.h"
 
@@ -16,6 +18,8 @@ class ThreeByThreeBoard : public Board
         virtual void Apply(int input, string owner);
         virtual vector<Cell> Cells();
         virtual Cell FindCell(int value);
+        virtual Cell FindCellByCoordinates(int x, int y);
+        virtual bool HasAvailableMoves();
         
     private:
         Cell * findCell(int value);

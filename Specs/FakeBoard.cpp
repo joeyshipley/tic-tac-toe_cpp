@@ -4,6 +4,7 @@ FakeBoard::FakeBoard()
 {
     InitializedTimesCalled = 0;
     ApplyTimesCalled = 0;
+    returnsFromFindCellCall = * Cell::InvalidCell();
 }
 
 FakeBoard::~FakeBoard() {}
@@ -25,6 +26,10 @@ vector<Cell> FakeBoard::Cells()
 
 Cell FakeBoard::FindCell(int value)
 {
-    Cell cell;
-    return cell;
+    return returnsFromFindCellCall;
+}
+
+void FakeBoard::AndReturnsFromFindCell(Cell cell)
+{
+    returnsFromFindCellCall = cell;
 }

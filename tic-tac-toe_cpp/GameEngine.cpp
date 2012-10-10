@@ -1,8 +1,9 @@
 #include "GameEngine.h"
-#include "Rules.h"
+#include "PlayerInputValidator.h"
 
-GameEngine::GameEngine(Board * board)
+GameEngine::GameEngine(Board * board, InputValidator * inputValidator)
 {
+    this->inputValidator = inputValidator;
     this->board = board;
 }
 
@@ -13,8 +14,13 @@ void GameEngine::Start()
 
 Game GameEngine::PerformTurn(int input)
 {
+    Game game;
+
+    string inputValidation = inputValidator->Check(input, board);
+    if(inputValidation != Rules::VALID)
+        return game;
+
     board->Apply(input, Rules::PLAYER);
     
-    Game game;
     return game;
 }

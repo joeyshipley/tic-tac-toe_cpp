@@ -28,9 +28,15 @@ Cell ThreeByThreeBoard::FindCell(int value)
 
 Cell * ThreeByThreeBoard::findCell(int value)
 {
-    for(int i = 0; i < cells.size(); i++)
-        if(cells[i].Value == value)
-            return &cells[i];
-            
-    throw exception();
+    try
+    {
+        for(int i = 0; i < cells.size(); i++)
+            if(cells[i].Value == value)
+                return &cells[i];
+    }
+    catch (exception ex)
+    {
+        Cell * cell = Cell::InvalidCell();
+        return cell;
+    }
 }

@@ -14,6 +14,10 @@
 		6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB5A1624AAFA00719A79 /* Cell.cpp */; };
 		6A11DB641624BC4400719A79 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB621624BC4400719A79 /* Rules.cpp */; };
 		6A11DB651624BC4400719A79 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB621624BC4400719A79 /* Rules.cpp */; };
+		6A11DB6D1625DF4400719A79 /* InputValidatorSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */; };
+		6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
+		6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
+		6A11DB791625F2F500719A79 /* FakeInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */; };
 		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
@@ -60,6 +64,12 @@
 		6A11DB5B1624AAFA00719A79 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		6A11DB621624BC4400719A79 /* Rules.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rules.cpp; sourceTree = "<group>"; };
 		6A11DB631624BC4400719A79 /* Rules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rules.h; sourceTree = "<group>"; };
+		6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputValidatorSpecs.cpp; sourceTree = "<group>"; };
+		6A11DB701625DF5B00719A79 /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
+		6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerInputValidator.cpp; sourceTree = "<group>"; };
+		6A11DB741625F1C000719A79 /* PlayerInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInputValidator.h; sourceTree = "<group>"; };
+		6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeInputValidator.cpp; sourceTree = "<group>"; };
+		6A11DB781625F2F500719A79 /* FakeInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeInputValidator.h; sourceTree = "<group>"; };
 		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
 		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -103,6 +113,8 @@
 			children = (
 				6A3B37BE162477E600A0086E /* FakeBoard.cpp */,
 				6A3B37BF162477E600A0086E /* FakeBoard.h */,
+				6A11DB771625F2F500719A79 /* FakeInputValidator.cpp */,
+				6A11DB781625F2F500719A79 /* FakeInputValidator.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -159,6 +171,9 @@
 				6A3B37AC162465A800A0086E /* GameEngine.h */,
 				6A11DB621624BC4400719A79 /* Rules.cpp */,
 				6A11DB631624BC4400719A79 /* Rules.h */,
+				6A11DB701625DF5B00719A79 /* InputValidator.h */,
+				6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */,
+				6A11DB741625F1C000719A79 /* PlayerInputValidator.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -181,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */,
+				6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -283,6 +299,7 @@
 				6A11DB54162493E000719A79 /* Game.cpp in Sources */,
 				6A11DB5C1624AAFA00719A79 /* Cell.cpp in Sources */,
 				6A11DB641624BC4400719A79 /* Rules.cpp in Sources */,
+				6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +316,9 @@
 				6A11DB591624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp in Sources */,
 				6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */,
 				6A11DB651624BC4400719A79 /* Rules.cpp in Sources */,
+				6A11DB6D1625DF4400719A79 /* InputValidatorSpecs.cpp in Sources */,
+				6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
+				6A11DB791625F2F500719A79 /* FakeInputValidator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

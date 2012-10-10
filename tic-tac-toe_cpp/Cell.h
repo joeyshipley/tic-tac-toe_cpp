@@ -9,7 +9,9 @@ class Cell
     public:
         int Value;
         string Owner;
+        bool IsValid;
         Cell();
+        static Cell * InvalidCell();
 };
 
 #endif /* defined(__tic_tac_toe_cpp__Cell__) */

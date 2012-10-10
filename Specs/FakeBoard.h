@@ -14,8 +14,12 @@ class FakeBoard : public Board
         virtual vector<Cell> Cells();
         virtual Cell FindCell(int value);
         
+    private:
+        Cell returnsFromFindCellCall;
+        
     public:
         FakeBoard();
+        void AndReturnsFromFindCell(Cell cell);
         int InitializedTimesCalled;
         int ApplyTimesCalled;
 };

@@ -18,6 +18,11 @@ class Rules
         static const string NONE;
         static const string PLAYER;
         static const string COMPUTER;
+    
+    public:
+        static const string VALID;
+        static const string INVALID;
+        static const string TAKEN;
 };
 
 #endif /* defined(__tic_tac_toe_cpp__Rules__) */

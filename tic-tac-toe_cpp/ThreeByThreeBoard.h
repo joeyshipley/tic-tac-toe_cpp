@@ -13,13 +13,17 @@ class ThreeByThreeBoard : public Board
         vector<Cell> cells;
 
     public:
+        ThreeByThreeBoard();
         virtual ~ThreeByThreeBoard();
         virtual void Initialize();
+        virtual void Initialize(vector<Cell> cells);
         virtual void Apply(int input, string owner);
         virtual vector<Cell> Cells();
         virtual Cell FindCell(int value);
         virtual Cell FindCellByCoordinates(int x, int y);
         virtual bool HasAvailableMoves();
+        virtual vector<Cell> AvailableMoves();
+        virtual Board * Clone();
         
     private:
         Cell * findCell(int value);

@@ -14,6 +14,8 @@ void FakeBoard::Initialize()
     InitializedTimesCalled += 1;
 }
 
+void FakeBoard::Initialize(vector<Cell> cells) {}
+
 void FakeBoard::Apply(int input, string owner)
 {
     ApplyTimesCalled += 1;
@@ -37,6 +39,16 @@ Cell FakeBoard::FindCellByCoordinates(int x, int y)
 bool FakeBoard::HasAvailableMoves()
 {
     return false;
+}
+
+vector<Cell> FakeBoard::AvailableMoves()
+{
+    return vector<Cell>(0);
+}
+
+Board * FakeBoard::Clone()
+{
+    return NULL;
 }
 
 void FakeBoard::AndReturnsFromFindCell(Cell cell)

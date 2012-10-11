@@ -1,10 +1,17 @@
 #include "ThreeByThreeBoard.h"
 
+ThreeByThreeBoard::ThreeByThreeBoard() {}
+
 ThreeByThreeBoard::~ThreeByThreeBoard() {}
 
 void ThreeByThreeBoard::Initialize()
 {
     constructBoardCells();
+}
+
+void ThreeByThreeBoard::Initialize(vector<Cell> cells)
+{
+    this->cells = cells;
 }
 
 void ThreeByThreeBoard::Apply(int input, string owner)
@@ -40,6 +47,22 @@ bool ThreeByThreeBoard::HasAvailableMoves()
             return true;
             
     return false;
+}
+
+vector<Cell> ThreeByThreeBoard::AvailableMoves()
+{
+    vector<Cell> available;
+    for(int i = 0; i < cells.size(); i++)
+        if(cells[i].Owner == Rules::NONE)
+            available.push_back(cells[i]);
+    return available;
+}
+
+Board * ThreeByThreeBoard::Clone()
+{
+    Board * clone = new ThreeByThreeBoard();
+    clone->Initialize(this->cells);
+    return clone;
 }
 
 Cell * ThreeByThreeBoard::findCell(int value)

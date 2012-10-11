@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     Board * board = new ThreeByThreeBoard();
     InputValidator * validator = new PlayerInputValidator();
     GameStatusAlgorithm * status = new GameStatusChecker();
-    ComputerAiAlgorithm * ai = new NegaMaxAi();
+    ComputerAiAlgorithm * ai = new NegaMaxAi(status);
     
     GameEngine engine = * new GameEngine(board, validator, status, ai);
     

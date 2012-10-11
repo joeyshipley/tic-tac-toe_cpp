@@ -94,3 +94,54 @@ Context(WhenAskingTheBoardIfItHasAvailableMoves)
         Assert::That(hasAvailableMoves, Is().EqualTo(true));
     }
 };
+
+Context(WhenAskingForTheAvailableMoves)
+{
+    Board * board;
+    
+    void SetUp()
+    {
+        board = new ThreeByThreeBoard();
+        board->Initialize();
+    }
+    
+    void TearDown()
+    {
+        delete board;
+    }
+    
+    Spec(ItReturnsTheAvailableMoves)
+    {
+        board->Apply(1, Rules::PLAYER);
+            
+        vector<Cell> availableMoves = board->AvailableMoves();
+        Assert::That(availableMoves.size(), Is().EqualTo(8));
+    }
+};
+
+Context(WhenCloningABoard)
+{
+    Board * board;
+    
+    void SetUp()
+    {
+        board = new ThreeByThreeBoard();
+        board->Initialize();
+    }
+    
+    void TearDown()
+    {
+        delete board;
+    }
+    
+    Spec(ItReturnsTheAvailableMoves)
+    {
+        board->Apply(1, Rules::PLAYER);
+            
+        Board * clone = board->Clone();
+        clone->Apply(2, Rules::COMPUTER);
+        
+        Assert::That(board->AvailableMoves().size(), Is().EqualTo(8));
+        Assert::That(clone->AvailableMoves().size(), Is().EqualTo(7));
+    }
+};

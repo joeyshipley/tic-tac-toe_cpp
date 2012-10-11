@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0271561627455D009F3C20 /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
+		6A0271571627455E009F3C20 /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
 		6A11DB591624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB571624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp */; };
 		6A11DB5C1624AAFA00719A79 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB5A1624AAFA00719A79 /* Cell.cpp */; };
 		6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB5A1624AAFA00719A79 /* Cell.cpp */; };
@@ -26,10 +28,9 @@
 		6A11DB951626DC4000719A79 /* GameSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB931626DC4000719A79 /* GameSpecs.cpp */; };
 		6A11DB9C1626E99300719A79 /* DTO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB9A1626E99300719A79 /* DTO.cpp */; };
 		6A11DB9D1626E99300719A79 /* DTO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB9A1626E99300719A79 /* DTO.cpp */; };
+		6A11DBA1162700D900719A79 /* NegaMaxAiSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB9F162700D900719A79 /* NegaMaxAiSpecs.cpp */; };
 		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
-		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
-		6A3B37BD1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
 		6A3B37C0162477E600A0086E /* FakeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BE162477E600A0086E /* FakeBoard.cpp */; };
 		6A3B37C1162477E600A0086E /* FakeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BE162477E600A0086E /* FakeBoard.cpp */; };
 		6AE029BF1624516000392C62 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE029BE1624516000392C62 /* main.cpp */; };
@@ -90,6 +91,7 @@
 		6A11DB931626DC4000719A79 /* GameSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSpecs.cpp; sourceTree = "<group>"; };
 		6A11DB971626E41800719A79 /* DTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTO.h; sourceTree = "<group>"; };
 		6A11DB9A1626E99300719A79 /* DTO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTO.cpp; sourceTree = "<group>"; };
+		6A11DB9F162700D900719A79 /* NegaMaxAiSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NegaMaxAiSpecs.cpp; sourceTree = "<group>"; };
 		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
 		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -128,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A11DB9E162700BB00719A79 /* Ai */ = {
+			isa = PBXGroup;
+			children = (
+				6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */,
+				6A11DB9F162700D900719A79 /* NegaMaxAiSpecs.cpp */,
+			);
+			name = Ai;
+			sourceTree = "<group>";
+		};
 		6A3B37B516246EA400A0086E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +189,7 @@
 		6AE029CD1624519700392C62 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				6A11DB9E162700BB00719A79 /* Ai */,
 				6A3B37B516246EA400A0086E /* Helpers */,
 				6AE02A3A162464B300392C62 /* Models */,
 				6AE029EB1624550300392C62 /* Engine */,
@@ -227,7 +239,6 @@
 			children = (
 				6AE02A3E162464F700392C62 /* GameEngineSpecs.cpp */,
 				6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */,
-				6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -326,7 +337,6 @@
 			files = (
 				6AE029BF1624516000392C62 /* main.cpp in Sources */,
 				6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */,
-				6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */,
 				6A3B37C0162477E600A0086E /* FakeBoard.cpp in Sources */,
 				6A11DB5C1624AAFA00719A79 /* Cell.cpp in Sources */,
 				6A11DB641624BC4400719A79 /* Rules.cpp in Sources */,
@@ -334,6 +344,7 @@
 				6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */,
 				6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
 				6A11DB9C1626E99300719A79 /* DTO.cpp in Sources */,
+				6A0271561627455D009F3C20 /* ThreeByThreeBoard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +355,6 @@
 				6AE029CF1624519700392C62 /* main.cpp in Sources */,
 				6AE02A40162464F700392C62 /* GameEngineSpecs.cpp in Sources */,
 				6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */,
-				6A3B37BD1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */,
 				6A3B37C1162477E600A0086E /* FakeBoard.cpp in Sources */,
 				6A11DB591624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp in Sources */,
 				6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */,
@@ -359,6 +369,8 @@
 				6A11DB921626D36700719A79 /* FakeAi.cpp in Sources */,
 				6A11DB951626DC4000719A79 /* GameSpecs.cpp in Sources */,
 				6A11DB9D1626E99300719A79 /* DTO.cpp in Sources */,
+				6A11DBA1162700D900719A79 /* NegaMaxAiSpecs.cpp in Sources */,
+				6A0271571627455E009F3C20 /* ThreeByThreeBoard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

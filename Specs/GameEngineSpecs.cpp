@@ -7,7 +7,6 @@ using namespace igloo;
 #include "FakeInputValidator.h"
 #include "FakeGameStatusChecker.h"
 #include "FakeAi.h"
-#include "Game.h"
 
 Context(WhenStartingUpAGame)
 {
@@ -109,7 +108,7 @@ Context(WhenPerformingATurn)
         status->AndReturnsForCheck(Rules::TIE);
 
         engine->PerformTurn(1);
-        Assert::That(status->CheckTimesCalled, Is().EqualTo(1));
+        Assert::That(status->CheckTimesCalled, Is().EqualTo(2));
     }
     
     Spec(ItPerformsTheComputersMoveIfTheGameWasNotWonByThePlayer)

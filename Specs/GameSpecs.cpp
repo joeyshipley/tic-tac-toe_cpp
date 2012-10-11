@@ -1,7 +1,7 @@
 #include <igloo/igloo.h>
 using namespace igloo;
 
-#include "Game.h"
+#include "DTO.h"
 #include "Board.h"
 #include "ThreeByThreeBoard.h"
 #include "Rules.h"
@@ -23,13 +23,13 @@ Context(WhenBuildingTheGameResponseData)
     
     Spec(ItSetsTheMessage)
     {
-        Game * game = Game::Build(board->Cells(), Rules::INVALID, Rules::NONE);
+        Game * game = DTO::BuildGame(board->Cells(), Rules::INVALID, Rules::NONE);
         Assert::That(game->Message, Is().EqualTo(Rules::INVALID));
     }
     
     Spec(ItSetsTheCurrentWinner)
     {
-        Game * game = Game::Build(board->Cells(), Rules::INVALID, Rules::NONE);
+        Game * game = DTO::BuildGame(board->Cells(), Rules::INVALID, Rules::NONE);
         Assert::That(game->Winner, Is().EqualTo(Rules::NONE));
     }
     
@@ -37,7 +37,7 @@ Context(WhenBuildingTheGameResponseData)
     {
         board->Apply(1, Rules::PLAYER);
         
-        Game * game = Game::Build(board->Cells(), Rules::INVALID, Rules::NONE);
+        Game * game = DTO::BuildGame(board->Cells(), Rules::INVALID, Rules::NONE);
         Assert::That(game->Moves[0].Location, Is().EqualTo(1));
         Assert::That(game->Moves[0].Owner, Is().EqualTo(Rules::PLAYER));
     }
@@ -46,7 +46,7 @@ Context(WhenBuildingTheGameResponseData)
     {
         board->Apply(1, Rules::COMPUTER);
         
-        Game * game = Game::Build(board->Cells(), Rules::INVALID, Rules::NONE);
+        Game * game = DTO::BuildGame(board->Cells(), Rules::INVALID, Rules::NONE);
         Assert::That(game->Moves[0].Location, Is().EqualTo(1));
         Assert::That(game->Moves[0].Owner, Is().EqualTo(Rules::COMPUTER));
     }

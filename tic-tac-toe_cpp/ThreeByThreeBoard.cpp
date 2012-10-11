@@ -4,16 +4,7 @@ ThreeByThreeBoard::~ThreeByThreeBoard() {}
 
 void ThreeByThreeBoard::Initialize()
 {
-    cells = vector<Cell>(9);
-    cells[0] = * Cell::Build(1, -1, -1);
-    cells[1] = * Cell::Build(2, -1,  0);
-    cells[2] = * Cell::Build(3, -1,  1);
-    cells[3] = * Cell::Build(4,  0, -1);
-    cells[4] = * Cell::Build(5,  0,  0);
-    cells[5] = * Cell::Build(6,  0,  1);
-    cells[6] = * Cell::Build(7,  1, -1);
-    cells[7] = * Cell::Build(8,  1,  0);
-    cells[8] = * Cell::Build(9,  1,  1);
+    constructBoardCells();
 }
 
 void ThreeByThreeBoard::Apply(int input, string owner)
@@ -39,8 +30,7 @@ Cell ThreeByThreeBoard::FindCellByCoordinates(int x, int y)
         if(cells[i].X == x && cells[i].Y == y)
             return cells[i];
     
-    Cell cell = * Cell::InvalidCell();
-    return cell;
+    return * Cell::InvalidCell();
 }
 
 bool ThreeByThreeBoard::HasAvailableMoves()
@@ -58,6 +48,19 @@ Cell * ThreeByThreeBoard::findCell(int value)
         if(cells[i].Value == value)
             return &cells[i];
 
-    Cell * cell = Cell::InvalidCell();
-    return cell;
+    return Cell::InvalidCell();
+}
+
+void ThreeByThreeBoard::constructBoardCells()
+{
+    cells = vector<Cell>(9);
+    cells[0] = * Cell::Build(1, -1, -1);
+    cells[1] = * Cell::Build(2, -1,  0);
+    cells[2] = * Cell::Build(3, -1,  1);
+    cells[3] = * Cell::Build(4,  0, -1);
+    cells[4] = * Cell::Build(5,  0,  0);
+    cells[5] = * Cell::Build(6,  0,  1);
+    cells[6] = * Cell::Build(7,  1, -1);
+    cells[7] = * Cell::Build(8,  1,  0);
+    cells[8] = * Cell::Build(9,  1,  1);
 }

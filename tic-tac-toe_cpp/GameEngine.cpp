@@ -15,21 +15,34 @@ void GameEngine::Start()
 
 Game GameEngine::PerformTurn(int input)
 {
-    string inputValidation = validator->Check(input, board);
-    if(inputValidation != Rules::VALID)
-    {
-        return * Game::Build(board->Cells(), inputValidation);
-    }
-        
-    board->Apply(input, Rules::PLAYER);
+    string validation = validator->Check(input, board);
+    if(!receivedValidInput(validation))
+        return * DTO::BuildGame(board->Cells(), validation);
 
-    string winner = status->Check(board);
-    if(winner == Rules::NONE)
-    {
-        int computerChoice = ai->Next(board);
-        board->Apply(computerChoice, Rules::COMPUTER);
-        winner = status->Check(board);
-    }
+    performPlayersTurn(input);
+
+    if(shouldPerformComputersTurn())
+        performComputersTurn();
     
-    return * Game::Build(board->Cells(), inputValidation, winner);
+    return * DTO::BuildGame(board->Cells(), validation, status->Check(board));
+}
+
+bool GameEngine::receivedValidInput(string validation)
+{
+    return validation == Rules::VALID;
+}
+
+void GameEngine::performPlayersTurn(int input)
+{
+    board->Apply(input, Rules::PLAYER);
+}
+
+bool GameEngine::shouldPerformComputersTurn()
+{
+    return status->Check(board) == Rules::NONE;
+}
+
+void GameEngine::performComputersTurn()
+{
+    board->Apply(ai->Next(board), Rules::COMPUTER);
 }

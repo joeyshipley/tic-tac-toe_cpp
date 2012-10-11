@@ -23,6 +23,7 @@ class ThreeByThreeBoard : public Board
         
     private:
         Cell * findCell(int value);
+        void constructBoardCells();
 };
 
 #endif /* defined(__tic_tac_toe_cpp__ThreeByThreeBoard__) */

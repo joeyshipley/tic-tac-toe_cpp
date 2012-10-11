@@ -9,19 +9,40 @@ string GameStatusChecker::Check(Board * board)
     vector<Cell> cells = board->Cells();
     for(int i = 0; i < cells.size(); i++)
     {
-        if(winner == Rules::NONE)
-            winner = checkWinnerFromRow(board, cells[i].X, cells[i].Y);
-            
-        if(winner == Rules::NONE)
-            winner = checkWinnerFromColumn(board, cells[i].X, cells[i].Y);
-            
-        if(winner == Rules::NONE)
-            winner = checkWinnerFromTopLeftStartingDiagonal(board, cells[i].X, cells[i].Y);
-            
-        if(winner == Rules::NONE)
-            winner = checkWinnerFromBottomLeftStartingDiagonal(board, cells[i].X, cells[i].Y);
+        winner = checkWinnerFromPossibleWinningSets(board, cells[i].X, cells[i].Y);
+        if(isGameOver(winner))
+            return winner;
     }
-    
+
+    return Rules::NONE;
+}
+
+bool GameStatusChecker::isGameOver(string winner)
+{
+    return winner != Rules::NONE;
+}
+
+bool GameStatusChecker::shouldContinueChecking(string winner)
+{
+    return winner == Rules::NONE;
+}
+
+string GameStatusChecker::checkWinnerFromPossibleWinningSets(Board * board, int x, int y)
+{
+    string winner = Rules::NONE;
+
+    if(shouldContinueChecking(winner))
+        winner = checkWinnerFromRow(board, x, y);
+
+    if(shouldContinueChecking(winner))
+        winner = checkWinnerFromColumn(board, x, y);
+
+    if(shouldContinueChecking(winner))
+        winner = checkWinnerFromTopLeftStartingDiagonal(board, x, y);
+
+    if(shouldContinueChecking(winner))
+        winner = checkWinnerFromBottomLeftStartingDiagonal(board, x, y);
+
     return winner;
 }
 

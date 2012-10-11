@@ -7,16 +7,18 @@
 #include "Game.h"
 #include "InputValidator.h"
 #include "GameStatusAlgorithm.h"
+#include "ComputerAiAlgorithm.h"
 
 class GameEngine
 {
     private:
         Board * board;
-        InputValidator * inputValidator;
-        GameStatusAlgorithm * gameStatusAlgorithm;
+        InputValidator * validator;
+        GameStatusAlgorithm * status;
+        ComputerAiAlgorithm * ai;
         
     public:
-        GameEngine(Board * board, InputValidator * inputValidator, GameStatusAlgorithm * gameStatusAlgorithm);
+        GameEngine(Board * board, InputValidator * validator, GameStatusAlgorithm * status, ComputerAiAlgorithm * ai);
         void Start();
         Game PerformTurn(int input);
 };

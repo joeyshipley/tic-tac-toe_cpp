@@ -22,6 +22,9 @@
 		6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */; };
 		6A11DB801625FFFB00719A79 /* GameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */; };
 		6A11DB871626305300719A79 /* FakeGameStatusChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */; };
+		6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */; };
+		6A11DB8F1626D16E00719A79 /* NegaMaxAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */; };
+		6A11DB921626D36700719A79 /* FakeAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB901626D36700719A79 /* FakeAi.cpp */; };
 		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
@@ -80,6 +83,11 @@
 		6A11DB8216262F7800719A79 /* GameStatusAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatusAlgorithm.h; sourceTree = "<group>"; };
 		6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeGameStatusChecker.cpp; sourceTree = "<group>"; };
 		6A11DB861626305300719A79 /* FakeGameStatusChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeGameStatusChecker.h; sourceTree = "<group>"; };
+		6A11DB891626D11E00719A79 /* ComputerAiAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerAiAlgorithm.h; sourceTree = "<group>"; };
+		6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NegaMaxAi.cpp; sourceTree = "<group>"; };
+		6A11DB8D1626D16E00719A79 /* NegaMaxAi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NegaMaxAi.h; sourceTree = "<group>"; };
+		6A11DB901626D36700719A79 /* FakeAi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeAi.cpp; sourceTree = "<group>"; };
+		6A11DB911626D36700719A79 /* FakeAi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAi.h; sourceTree = "<group>"; };
 		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
 		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -127,6 +135,8 @@
 				6A11DB781625F2F500719A79 /* FakeInputValidator.h */,
 				6A11DB851626305300719A79 /* FakeGameStatusChecker.cpp */,
 				6A11DB861626305300719A79 /* FakeGameStatusChecker.h */,
+				6A11DB901626D36700719A79 /* FakeAi.cpp */,
+				6A11DB911626D36700719A79 /* FakeAi.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -155,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE02A39162464AA00392C62 /* Models */,
-				6AE029DB162452CB00392C62 /* AI */,
+				6AE029DB162452CB00392C62 /* Algorithms */,
 				6AE029DA162452C200392C62 /* Engine */,
 				6AE029BE1624516000392C62 /* main.cpp */,
 				6AE029C01624516000392C62 /* tic_tac_toe_cpp.1 */,
@@ -186,18 +196,21 @@
 				6A11DB701625DF5B00719A79 /* InputValidator.h */,
 				6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */,
 				6A11DB741625F1C000719A79 /* PlayerInputValidator.h */,
-				6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */,
-				6A11DB7E1625FFF600719A79 /* GameStatusChecker.h */,
-				6A11DB8216262F7800719A79 /* GameStatusAlgorithm.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
 		};
-		6AE029DB162452CB00392C62 /* AI */ = {
+		6AE029DB162452CB00392C62 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				6A11DB7D1625FFF600719A79 /* GameStatusChecker.cpp */,
+				6A11DB7E1625FFF600719A79 /* GameStatusChecker.h */,
+				6A11DB8216262F7800719A79 /* GameStatusAlgorithm.h */,
+				6A11DB891626D11E00719A79 /* ComputerAiAlgorithm.h */,
+				6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */,
+				6A11DB8D1626D16E00719A79 /* NegaMaxAi.h */,
 			);
-			name = AI;
+			name = Algorithms;
 			sourceTree = "<group>";
 		};
 		6AE029EA162454FD00392C62 /* AI */ = {
@@ -317,6 +330,7 @@
 				6A11DB641624BC4400719A79 /* Rules.cpp in Sources */,
 				6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
 				6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */,
+				6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +353,8 @@
 				6A11DB7C1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp in Sources */,
 				6A11DB801625FFFB00719A79 /* GameStatusChecker.cpp in Sources */,
 				6A11DB871626305300719A79 /* FakeGameStatusChecker.cpp in Sources */,
+				6A11DB8F1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
+				6A11DB921626D36700719A79 /* FakeAi.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

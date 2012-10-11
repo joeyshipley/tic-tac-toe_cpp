@@ -20,10 +20,10 @@ class FakeGameStatusChecker : public GameStatusAlgorithm
 
     public:
         FakeGameStatusChecker();
-        bool CheckTimesCalled;
+        int CheckTimesCalled;
+        void AndReturnsForCheck(string value);
 
     private:
-        void AndReturnsForCheck(string value);
         string returnForCheck;
 };
 

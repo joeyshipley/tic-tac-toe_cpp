@@ -8,6 +8,7 @@
 class NegaMaxAi : public ComputerAiAlgorithm
 {
     public:
+        virtual ~NegaMaxAi() {}
         virtual int Next(Board * board);
 };
 

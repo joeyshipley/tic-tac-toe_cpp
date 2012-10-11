@@ -19,7 +19,10 @@ Game GameEngine::PerformTurn(int input)
 
     string inputValidation = validator->Check(input, board);
     if(inputValidation != Rules::VALID)
+    {
+        game.Message = inputValidation;
         return game;
+    }
         
     board->Apply(input, Rules::PLAYER);
 

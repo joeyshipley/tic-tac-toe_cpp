@@ -10,6 +10,7 @@ using namespace std;
 class PlayerInputValidator : public InputValidator
 {
     public:
+        virtual ~PlayerInputValidator() {}
         virtual string Check(int input, Board * board);
 };
 

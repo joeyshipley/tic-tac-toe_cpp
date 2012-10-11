@@ -15,6 +15,7 @@
 class GameStatusAlgorithm
 {
     public:
+        virtual ~GameStatusAlgorithm() {}
         virtual string Check(Board * board) = 0;
 };
 

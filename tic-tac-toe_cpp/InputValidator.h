@@ -9,6 +9,7 @@ using namespace std;
 class InputValidator
 {
     public:
+        virtual ~InputValidator() {}
         virtual string Check(int input, Board * board) = 0;
 };
 

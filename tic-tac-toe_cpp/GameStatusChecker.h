@@ -15,6 +15,7 @@ struct coord
 class GameStatusChecker : public GameStatusAlgorithm
 {
     public:
+        virtual ~GameStatusChecker() {}
         virtual string Check(Board * board);
         
     private:

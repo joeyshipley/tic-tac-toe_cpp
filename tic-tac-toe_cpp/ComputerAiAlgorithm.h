@@ -7,6 +7,7 @@
 class ComputerAiAlgorithm
 {
     public:
+        virtual ~ComputerAiAlgorithm() {}
         virtual int Next(Board * board) = 0;
 };
 

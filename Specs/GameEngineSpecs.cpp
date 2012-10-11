@@ -75,7 +75,7 @@ Context(WhenPerformingATurn)
         validator->AndReturnsForCheck(Rules::VALID);
 
         Game game = engine->PerformTurn(1);
-        Assert::That(game.Message, Is().EqualTo(""));
+        Assert::That(game.Message, Is().EqualTo(Rules::VALID));
     }
     
     Spec(ItChecksTheInputValidity)

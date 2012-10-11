@@ -3,14 +3,9 @@
 
 #include "GameStatusAlgorithm.h"
 #include "Rules.h"
+#include "DTO.h"
 
 using namespace std;
-
-struct coord
-{
-    int X;
-    int Y;
-};
 
 class GameStatusChecker : public GameStatusAlgorithm
 {
@@ -23,8 +18,7 @@ class GameStatusChecker : public GameStatusAlgorithm
         string checkWinnerFromColumn(Board * board, int x, int y);
         string checkWinnerFromTopLeftStartingDiagonal(Board * board, int x, int y);
         string checkWinnerFromBottomLeftStartingDiagonal(Board * board, int x, int y);
-        coord coordinate(int x, int y);
-        vector<Cell> buildSetFrom(Board * board, coord first, coord second, coord third);
+        vector<Cell> buildSetFrom(Board * board, Coord first, Coord second, Coord third);
         string checkWinnerFromSet(vector<Cell> set);
 };
 

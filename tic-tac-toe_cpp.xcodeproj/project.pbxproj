@@ -25,6 +25,9 @@
 		6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */; };
 		6A11DB8F1626D16E00719A79 /* NegaMaxAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB8C1626D16E00719A79 /* NegaMaxAi.cpp */; };
 		6A11DB921626D36700719A79 /* FakeAi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB901626D36700719A79 /* FakeAi.cpp */; };
+		6A11DB951626DC4000719A79 /* GameSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB931626DC4000719A79 /* GameSpecs.cpp */; };
+		6A11DB9C1626E99300719A79 /* DTO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB9A1626E99300719A79 /* DTO.cpp */; };
+		6A11DB9D1626E99300719A79 /* DTO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB9A1626E99300719A79 /* DTO.cpp */; };
 		6A3B37AD162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37AE162465A800A0086E /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37AB162465A800A0086E /* GameEngine.cpp */; };
 		6A3B37BC1624772E00A0086E /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
@@ -88,6 +91,9 @@
 		6A11DB8D1626D16E00719A79 /* NegaMaxAi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NegaMaxAi.h; sourceTree = "<group>"; };
 		6A11DB901626D36700719A79 /* FakeAi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeAi.cpp; sourceTree = "<group>"; };
 		6A11DB911626D36700719A79 /* FakeAi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAi.h; sourceTree = "<group>"; };
+		6A11DB931626DC4000719A79 /* GameSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameSpecs.cpp; sourceTree = "<group>"; };
+		6A11DB971626E41800719A79 /* DTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTO.h; sourceTree = "<group>"; };
+		6A11DB9A1626E99300719A79 /* DTO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTO.cpp; sourceTree = "<group>"; };
 		6A3B37AB162465A800A0086E /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
 		6A3B37AC162465A800A0086E /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		6A3B37B116246C7000A0086E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 				6A11DB701625DF5B00719A79 /* InputValidator.h */,
 				6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */,
 				6A11DB741625F1C000719A79 /* PlayerInputValidator.h */,
+				6A11DB971626E41800719A79 /* DTO.h */,
+				6A11DB9A1626E99300719A79 /* DTO.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				6A11DB571624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp */,
+				6A11DB931626DC4000719A79 /* GameSpecs.cpp */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
 				6A11DB7F1625FFF600719A79 /* GameStatusChecker.cpp in Sources */,
 				6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
+				6A11DB9C1626E99300719A79 /* DTO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +365,8 @@
 				6A11DB871626305300719A79 /* FakeGameStatusChecker.cpp in Sources */,
 				6A11DB8F1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
 				6A11DB921626D36700719A79 /* FakeAi.cpp in Sources */,
+				6A11DB951626DC4000719A79 /* GameSpecs.cpp in Sources */,
+				6A11DB9D1626E99300719A79 /* DTO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

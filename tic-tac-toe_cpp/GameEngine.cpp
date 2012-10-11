@@ -15,13 +15,10 @@ void GameEngine::Start()
 
 Game GameEngine::PerformTurn(int input)
 {
-    Game game;
-
     string inputValidation = validator->Check(input, board);
     if(inputValidation != Rules::VALID)
     {
-        game.Message = inputValidation;
-        return game;
+        return * Game::Build(board->Cells(), inputValidation);
     }
         
     board->Apply(input, Rules::PLAYER);
@@ -34,5 +31,5 @@ Game GameEngine::PerformTurn(int input)
         winner = status->Check(board);
     }
     
-    return game;
+    return * Game::Build(board->Cells(), inputValidation, winner);
 }

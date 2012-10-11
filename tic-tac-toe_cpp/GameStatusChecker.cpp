@@ -27,37 +27,29 @@ string GameStatusChecker::Check(Board * board)
 
 string GameStatusChecker::checkWinnerFromRow(Board * board, int x, int y)
 {
-    vector<Cell> set = buildSetFrom(board, coordinate(x, y - 1), coordinate(x, y), coordinate(x, y + 1));
+    vector<Cell> set = buildSetFrom(board, * DTO::BuildCoord(x, y - 1), * DTO::BuildCoord(x, y), * DTO::BuildCoord(x, y + 1));
     return checkWinnerFromSet(set);
 }
 
 string GameStatusChecker::checkWinnerFromColumn(Board * board, int x, int y)
 {
-    vector<Cell> set = buildSetFrom(board, coordinate(x - 1, y), coordinate(x, y), coordinate(x + 1, y));
+    vector<Cell> set = buildSetFrom(board, * DTO::BuildCoord(x - 1, y), * DTO::BuildCoord(x, y), * DTO::BuildCoord(x + 1, y));
     return checkWinnerFromSet(set);
 }
 
 string GameStatusChecker::checkWinnerFromTopLeftStartingDiagonal(Board * board, int x, int y)
 {
-    vector<Cell> set = buildSetFrom(board, coordinate(x - 1, y - 1), coordinate(x, y), coordinate(x + 1, y + 1));
+    vector<Cell> set = buildSetFrom(board, * DTO::BuildCoord(x - 1, y - 1), * DTO::BuildCoord(x, y), * DTO::BuildCoord(x + 1, y + 1));
     return checkWinnerFromSet(set);
 }
 
 string GameStatusChecker::checkWinnerFromBottomLeftStartingDiagonal(Board * board, int x, int y)
 {
-    vector<Cell> set = buildSetFrom(board, coordinate(x + 1, y - 1), coordinate(x, y), coordinate(x - 1, y + 1));
+    vector<Cell> set = buildSetFrom(board, * DTO::BuildCoord(x + 1, y - 1), * DTO::BuildCoord(x, y), * DTO::BuildCoord(x - 1, y + 1));
     return checkWinnerFromSet(set);
 }
 
-coord GameStatusChecker::coordinate(int x, int y)
-{
-    coord coordinate;
-    coordinate.X = x;
-    coordinate.Y = y;
-    return coordinate;
-}
-
-vector<Cell> GameStatusChecker::buildSetFrom(Board * board, coord first, coord second, coord third)
+vector<Cell> GameStatusChecker::buildSetFrom(Board * board, Coord first, Coord second, Coord third)
 {
     vector<Cell> set = vector<Cell>(3);
     set[0] = board->FindCellByCoordinates(first.X, first.Y);

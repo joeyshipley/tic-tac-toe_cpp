@@ -16,6 +16,9 @@ class Rules
         static const string VALID;
         static const string INVALID;
         static const string TAKEN;
+        
+    public:
+        static const int INVALID_INPUT_VALUE;
 };
 
 #endif /* defined(__tic_tac_toe_cpp__Rules__) */

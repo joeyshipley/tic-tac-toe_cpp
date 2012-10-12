@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		6A0271561627455D009F3C20 /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
 		6A0271571627455E009F3C20 /* ThreeByThreeBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3B37BA1624772E00A0086E /* ThreeByThreeBoard.cpp */; };
+		6A02715B16283B0D009F3C20 /* ResponseFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02715916283B0D009F3C20 /* ResponseFormatter.cpp */; };
+		6A02715C16283B0D009F3C20 /* ResponseFormatter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02715916283B0D009F3C20 /* ResponseFormatter.cpp */; };
+		6A02716716283B69009F3C20 /* ConsoleIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02716516283B69009F3C20 /* ConsoleIO.cpp */; };
+		6A02716816283B69009F3C20 /* ConsoleIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02716516283B69009F3C20 /* ConsoleIO.cpp */; };
+		6A02716C1628433F009F3C20 /* ConsoleIOSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02716A1628433F009F3C20 /* ConsoleIOSpecs.cpp */; };
+		6A02716F16284581009F3C20 /* FakeIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A02716D16284580009F3C20 /* FakeIO.cpp */; };
+		6A0271721628473B009F3C20 /* ResponseFormatterSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A0271701628473B009F3C20 /* ResponseFormatterSpecs.cpp */; };
+		6A02717316284A42009F3C20 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB621624BC4400719A79 /* Rules.cpp */; };
 		6A11DB591624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB571624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp */; };
 		6A11DB5C1624AAFA00719A79 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB5A1624AAFA00719A79 /* Cell.cpp */; };
 		6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB5A1624AAFA00719A79 /* Cell.cpp */; };
 		6A11DB641624BC4400719A79 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB621624BC4400719A79 /* Rules.cpp */; };
-		6A11DB651624BC4400719A79 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB621624BC4400719A79 /* Rules.cpp */; };
 		6A11DB6D1625DF4400719A79 /* InputValidatorSpecs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB6B1625DF4400719A79 /* InputValidatorSpecs.cpp */; };
 		6A11DB751625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
 		6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A11DB731625F1BF00719A79 /* PlayerInputValidator.cpp */; };
@@ -66,6 +73,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A02715916283B0D009F3C20 /* ResponseFormatter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResponseFormatter.cpp; sourceTree = "<group>"; };
+		6A02715A16283B0D009F3C20 /* ResponseFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseFormatter.h; sourceTree = "<group>"; };
+		6A02716216283B53009F3C20 /* IO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		6A02716516283B69009F3C20 /* ConsoleIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleIO.cpp; sourceTree = "<group>"; };
+		6A02716616283B69009F3C20 /* ConsoleIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleIO.h; sourceTree = "<group>"; };
+		6A02716A1628433F009F3C20 /* ConsoleIOSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleIOSpecs.cpp; sourceTree = "<group>"; };
+		6A02716D16284580009F3C20 /* FakeIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeIO.cpp; sourceTree = "<group>"; };
+		6A02716E16284580009F3C20 /* FakeIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeIO.h; sourceTree = "<group>"; };
+		6A0271701628473B009F3C20 /* ResponseFormatterSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResponseFormatterSpecs.cpp; sourceTree = "<group>"; };
 		6A11DB571624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreeByThreeBoardSpecs.cpp; sourceTree = "<group>"; };
 		6A11DB5A1624AAFA00719A79 /* Cell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
 		6A11DB5B1624AAFA00719A79 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
@@ -130,13 +146,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A11DB9E162700BB00719A79 /* Ai */ = {
+		6A02715816283A7D009F3C20 /* Client - Console */ = {
+			isa = PBXGroup;
+			children = (
+				6A02715916283B0D009F3C20 /* ResponseFormatter.cpp */,
+				6A02715A16283B0D009F3C20 /* ResponseFormatter.h */,
+				6A02716216283B53009F3C20 /* IO.h */,
+				6A02716516283B69009F3C20 /* ConsoleIO.cpp */,
+				6A02716616283B69009F3C20 /* ConsoleIO.h */,
+			);
+			name = "Client - Console";
+			sourceTree = "<group>";
+		};
+		6A02716916284325009F3C20 /* Client - Console */ = {
+			isa = PBXGroup;
+			children = (
+				6A02716A1628433F009F3C20 /* ConsoleIOSpecs.cpp */,
+				6A0271701628473B009F3C20 /* ResponseFormatterSpecs.cpp */,
+			);
+			name = "Client - Console";
+			sourceTree = "<group>";
+		};
+		6A11DB9E162700BB00719A79 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
 				6A11DB7A1625FFBC00719A79 /* GameStatusCheckerSpecs.cpp */,
 				6A11DB9F162700D900719A79 /* NegaMaxAiSpecs.cpp */,
 			);
-			name = Ai;
+			name = Algorithms;
 			sourceTree = "<group>";
 		};
 		6A3B37B516246EA400A0086E /* Helpers */ = {
@@ -150,6 +187,8 @@
 				6A11DB861626305300719A79 /* FakeGameStatusChecker.h */,
 				6A11DB901626D36700719A79 /* FakeAi.cpp */,
 				6A11DB911626D36700719A79 /* FakeAi.h */,
+				6A02716D16284580009F3C20 /* FakeIO.cpp */,
+				6A02716E16284580009F3C20 /* FakeIO.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -177,6 +216,7 @@
 		6AE029BD1624516000392C62 /* tic-tac-toe_cpp */ = {
 			isa = PBXGroup;
 			children = (
+				6A02715816283A7D009F3C20 /* Client - Console */,
 				6AE02A39162464AA00392C62 /* Models */,
 				6AE029DB162452CB00392C62 /* Algorithms */,
 				6AE029DA162452C200392C62 /* Engine */,
@@ -189,11 +229,11 @@
 		6AE029CD1624519700392C62 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				6A11DB9E162700BB00719A79 /* Ai */,
+				6A02716916284325009F3C20 /* Client - Console */,
+				6A11DB9E162700BB00719A79 /* Algorithms */,
 				6A3B37B516246EA400A0086E /* Helpers */,
 				6AE02A3A162464B300392C62 /* Models */,
 				6AE029EB1624550300392C62 /* Engine */,
-				6AE029EA162454FD00392C62 /* AI */,
 				6AE029CE1624519700392C62 /* main.cpp */,
 				6AE029D01624519700392C62 /* Specs.1 */,
 			);
@@ -225,13 +265,6 @@
 				6A11DB8D1626D16E00719A79 /* NegaMaxAi.h */,
 			);
 			name = Algorithms;
-			sourceTree = "<group>";
-		};
-		6AE029EA162454FD00392C62 /* AI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = AI;
 			sourceTree = "<group>";
 		};
 		6AE029EB1624550300392C62 /* Engine */ = {
@@ -345,6 +378,8 @@
 				6A11DB8E1626D16E00719A79 /* NegaMaxAi.cpp in Sources */,
 				6A11DB9C1626E99300719A79 /* DTO.cpp in Sources */,
 				6A0271561627455D009F3C20 /* ThreeByThreeBoard.cpp in Sources */,
+				6A02715B16283B0D009F3C20 /* ResponseFormatter.cpp in Sources */,
+				6A02716716283B69009F3C20 /* ConsoleIO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +393,6 @@
 				6A3B37C1162477E600A0086E /* FakeBoard.cpp in Sources */,
 				6A11DB591624A9EF00719A79 /* ThreeByThreeBoardSpecs.cpp in Sources */,
 				6A11DB5D1624AAFA00719A79 /* Cell.cpp in Sources */,
-				6A11DB651624BC4400719A79 /* Rules.cpp in Sources */,
 				6A11DB6D1625DF4400719A79 /* InputValidatorSpecs.cpp in Sources */,
 				6A11DB761625F1C000719A79 /* PlayerInputValidator.cpp in Sources */,
 				6A11DB791625F2F500719A79 /* FakeInputValidator.cpp in Sources */,
@@ -371,6 +405,12 @@
 				6A11DB9D1626E99300719A79 /* DTO.cpp in Sources */,
 				6A11DBA1162700D900719A79 /* NegaMaxAiSpecs.cpp in Sources */,
 				6A0271571627455E009F3C20 /* ThreeByThreeBoard.cpp in Sources */,
+				6A02715C16283B0D009F3C20 /* ResponseFormatter.cpp in Sources */,
+				6A02716816283B69009F3C20 /* ConsoleIO.cpp in Sources */,
+				6A02716C1628433F009F3C20 /* ConsoleIOSpecs.cpp in Sources */,
+				6A02716F16284581009F3C20 /* FakeIO.cpp in Sources */,
+				6A0271721628473B009F3C20 /* ResponseFormatterSpecs.cpp in Sources */,
+				6A02717316284A42009F3C20 /* Rules.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

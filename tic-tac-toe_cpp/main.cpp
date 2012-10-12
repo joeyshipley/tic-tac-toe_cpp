@@ -10,6 +10,8 @@
 #include "GameStatusChecker.h"
 #include "NegaMaxAi.h"
 
+using namespace std;
+
 int main(int argc, char **argv)
 {
     Board * board = new ThreeByThreeBoard();
@@ -17,12 +19,23 @@ int main(int argc, char **argv)
     GameStatusAlgorithm * status = new GameStatusChecker();
     ComputerAiAlgorithm * ai = new NegaMaxAi(status);
     
+    cout << "Welcome to TTT" << endl;
+
     GameEngine engine = * new GameEngine(board, validator, status, ai);
     
     engine.Start();
     
-    Game response1 = engine.PerformTurn(1);
+    string input;
+    getline(cin, input);
+    int choice = atoi(input.c_str());
+    
+    Game response1 = engine.PerformTurn(choice);
+    cout << response1.Message << endl;
+    
     Game response2 = engine.PerformTurn(2);
+    cout << response2.Message << endl;
+    
+    
     
     delete board;
     delete validator;

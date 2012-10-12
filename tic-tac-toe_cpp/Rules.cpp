@@ -8,3 +8,5 @@ const string Rules::TIE = "tie";
 const string Rules::VALID = "valid";
 const string Rules::INVALID = "invalid";
 const string Rules::TAKEN = "taken";
+
+const int Rules::INVALID_INPUT_VALUE = -1;

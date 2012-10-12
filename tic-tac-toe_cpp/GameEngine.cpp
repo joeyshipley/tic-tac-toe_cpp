@@ -13,18 +13,29 @@ void GameEngine::Start()
     board->Initialize();
 }
 
-Game GameEngine::PerformTurn(int input)
+Game * GameEngine::PerformTurn(int input)
 {
     string validation = validator->Check(input, board);
     if(!receivedValidInput(validation))
-        return * DTO::BuildGame(board->Cells(), validation);
+        return DTO::BuildGame(board->Cells(), validation);
 
     performPlayersTurn(input);
 
     if(shouldPerformComputersTurn())
         performComputersTurn();
     
-    return * DTO::BuildGame(board->Cells(), validation, status->Check(board));
+    return DTO::BuildGame(board->Cells(), validation, status->Check(board));
+}
+
+bool GameEngine::IsGameOver()
+{
+    string winner = status->Check(board);
+    return winner != Rules::NONE;
+}
+
+Game * GameEngine::CurrentState()
+{
+    return DTO::BuildGame(board->Cells(), Rules::VALID);
 }
 
 bool GameEngine::receivedValidInput(string validation)

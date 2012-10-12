@@ -2,6 +2,7 @@
 #define __tic_tac_toe_cpp__GameEngine__
 
 #include <iostream>
+#include "Engine.h"
 #include "Rules.h"
 #include "Board.h"
 #include "DTO.h"
@@ -11,7 +12,7 @@
 
 using namespace std;
 
-class GameEngine
+class GameEngine : public Engine
 {
     private:
         Board * board;
@@ -21,8 +22,11 @@ class GameEngine
         
     public:
         GameEngine(Board * board, InputValidator * validator, GameStatusAlgorithm * status, ComputerAiAlgorithm * ai);
-        void Start();
-        Game PerformTurn(int input);
+        virtual void Start();
+        virtual Game * PerformTurn(int input);
+        virtual bool IsGameOver();
+        virtual Game * CurrentState();
+
         
     private:
         bool receivedValidInput(string validation);

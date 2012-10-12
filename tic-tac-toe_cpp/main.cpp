@@ -1,5 +1,8 @@
 #include <iostream>
 
+#include "ConsoleRunner.h"
+#include "IO.h"
+#include "ConsoleIO.h"
 #include "GameEngine.h"
 #include "Board.h"
 #include "InputValidator.h"
@@ -14,33 +17,23 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
+    IO * io = new ConsoleIO();
     Board * board = new ThreeByThreeBoard();
     InputValidator * validator = new PlayerInputValidator();
     GameStatusAlgorithm * status = new GameStatusChecker();
     ComputerAiAlgorithm * ai = new NegaMaxAi(status);
-    
-    cout << "Welcome to TTT" << endl;
+    GameEngine * engine = new GameEngine(board, validator, status, ai);
+    ConsoleRunner * runner = new ConsoleRunner(io, engine);
 
-    GameEngine engine = * new GameEngine(board, validator, status, ai);
+    runner->Go();
     
-    engine.Start();
-    
-    string input;
-    getline(cin, input);
-    int choice = atoi(input.c_str());
-    
-    Game response1 = engine.PerformTurn(choice);
-    cout << response1.Message << endl;
-    
-    Game response2 = engine.PerformTurn(2);
-    cout << response2.Message << endl;
-    
-    
-    
+    delete io;
     delete board;
     delete validator;
     delete status;
     delete ai;
+    delete engine;
+    delete runner;
     
     return 0;
 }

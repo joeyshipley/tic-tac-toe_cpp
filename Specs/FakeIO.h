@@ -4,11 +4,11 @@
 #include <iostream>
 #include "IO.h"
 
-class FakeIO
+class FakeIO : public IO
 {
     public:
         virtual void Output(string message);
-        virtual int Input(string value);
+        virtual int Input();
         
     public:
         FakeIO();

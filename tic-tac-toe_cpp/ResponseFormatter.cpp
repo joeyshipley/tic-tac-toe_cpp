@@ -23,6 +23,11 @@ string ResponseFormatter::FormatValidation(string validation)
     return "";
 }
 
+string ResponseFormatter::AskForInput()
+{
+    return "Please provide a move:";
+}
+
 string ResponseFormatter::Thinking()
 {
     return "The computer is thinking. Please wait.";

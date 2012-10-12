@@ -73,8 +73,8 @@ Context(WhenPerformingATurn)
     {
         validator->AndReturnsForCheck(Rules::VALID);
 
-        Game game = engine->PerformTurn(1);
-        Assert::That(game.Message, Is().EqualTo(Rules::VALID));
+        Game * game = engine->PerformTurn(1);
+        Assert::That(game->Message, Is().EqualTo(Rules::VALID));
     }
     
     Spec(ItChecksTheInputValidity)
@@ -129,5 +129,60 @@ Context(WhenPerformingATurn)
         
         engine->PerformTurn(1);
         Assert::That(status->CheckTimesCalled, Is().EqualTo(2));
+    }
+};
+
+Context(WhenAskingIfTheGameIsOver)
+{
+    FakeBoard * board;
+    FakeInputValidator * validator;
+    FakeGameStatusChecker * status;
+    FakeAi * ai;
+    GameEngine * engine;
+    
+    void SetUp()
+    {
+        board = new FakeBoard();
+        validator = new FakeInputValidator();
+        status = new FakeGameStatusChecker();
+        ai = new FakeAi();
+        engine = new GameEngine(board, validator, status, ai);
+    }
+    
+    void TearDown()
+    {
+        delete board;
+        delete validator;
+        delete status;
+        delete ai;
+        delete engine;
+    }
+    
+    Spec(ItLetsUsKnowThatItIsOverIfThePlayerHasWon)
+    {
+        status->AndReturnsForCheck(Rules::PLAYER);
+        bool isGameOver = engine->IsGameOver();
+        Assert::That(isGameOver, Is().True());
+    }
+
+    Spec(ItLetsUsKnowThatItIsOverIfTheComputerHasWon)
+    {
+        status->AndReturnsForCheck(Rules::COMPUTER);
+        bool isGameOver = engine->IsGameOver();
+        Assert::That(isGameOver, Is().True());
+    }
+
+    Spec(ItLetsUsKnowThatItIsOverIfTheGameIsATie)
+    {
+        status->AndReturnsForCheck(Rules::TIE);
+        bool isGameOver = engine->IsGameOver();
+        Assert::That(isGameOver, Is().True());
+    }
+    
+    Spec(ItLetsUsKnowThatItIsNotOverWhenItsStillGoing)
+    {
+        status->AndReturnsForCheck(Rules::NONE);
+        bool isGameOver = engine->IsGameOver();
+        Assert::That(isGameOver, Is().False());
     }
 };

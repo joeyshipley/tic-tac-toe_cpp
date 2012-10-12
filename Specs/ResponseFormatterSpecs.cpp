@@ -45,6 +45,12 @@ Context(WhenFormattingTheResponse)
         Assert::That(message.find("thinking"), Is().Not().EqualTo(-1));
     }
     
+    Spec(ItHasAnAskForInputMessage)
+    {
+        string message = formatter->AskForInput();
+        Assert::That(message.find("provide"), Is().Not().EqualTo(-1));
+    }
+    
     Spec(ItDisplaysTheYouWinnerMessageIfYouWinTheGame)
     {
         string message = formatter->GameOver(Rules::PLAYER);

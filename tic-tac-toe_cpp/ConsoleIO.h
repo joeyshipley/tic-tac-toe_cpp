@@ -8,7 +8,7 @@ class ConsoleIO : public IO
 {
     public:
         virtual void Output(string message);
-        virtual int Input(string value);
+        virtual int Input();
         
     protected:
         virtual int convertInputToInt(string input);

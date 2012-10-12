@@ -13,7 +13,7 @@ void FakeIO::Output(string message)
     OutputTimesCalled += 1;
 }
 
-int FakeIO::Input(string value)
+int FakeIO::Input()
 {
     InputTimesCalled += 1;
     return returnForInput;

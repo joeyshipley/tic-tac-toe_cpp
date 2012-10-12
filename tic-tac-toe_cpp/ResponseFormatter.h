@@ -10,6 +10,7 @@ class ResponseFormatter
 {
     public:
         string FormatValidation(string validation);
+        string AskForInput();
         string Thinking();
         string GameOver(string winner);
         string DisplayTicTacToe(Game * game);

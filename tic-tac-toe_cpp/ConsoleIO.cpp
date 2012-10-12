@@ -6,7 +6,7 @@ void ConsoleIO::Output(string message)
     cout << message << endl;
 }
 
-int ConsoleIO::Input(string value)
+int ConsoleIO::Input()
 {
     string input;
     getline(cin, input);

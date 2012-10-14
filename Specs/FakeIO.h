@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include "IO.h"
+#include <vector>
+
+using namespace std;
 
 class FakeIO : public IO
 {
@@ -15,6 +18,7 @@ class FakeIO : public IO
         int OutputTimesCalled;
         int InputTimesCalled;
         void AndReturnsForInput(int value);
+        vector<string> outputMessages;
 
     private:
         int returnForInput;

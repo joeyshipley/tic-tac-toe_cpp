@@ -6,10 +6,12 @@ FakeIO::FakeIO()
     OutputTimesCalled = 0;
     InputTimesCalled = 0;
     returnForInput = Rules::INVALID_INPUT_VALUE;
+    outputMessages = vector<string>();
 }
 
 void FakeIO::Output(string message)
 {
+    outputMessages.push_back(message);
     OutputTimesCalled += 1;
 }
 

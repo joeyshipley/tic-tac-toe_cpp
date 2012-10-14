@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
+ConsoleRunner * buildConsoleRunner()
 {
     IO * io = new ConsoleIO();
     Board * board = new ThreeByThreeBoard();
@@ -25,15 +25,14 @@ int main(int argc, char **argv)
     GameEngine * engine = new GameEngine(board, validator, status, ai);
     ConsoleRunner * runner = new ConsoleRunner(io, engine);
 
+    return runner;
+}
+
+int main(int argc, char **argv)
+{
+    ConsoleRunner * runner = buildConsoleRunner();
     runner->Go();
-    
-    delete io;
-    delete board;
-    delete validator;
-    delete status;
-    delete ai;
-    delete engine;
+ 
     delete runner;
-    
     return 0;
 }

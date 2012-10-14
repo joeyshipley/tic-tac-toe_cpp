@@ -1,11 +1,3 @@
-//
-//  Structs.h
-//  tic-tac-toe_cpp
-//
-//  Created by Joey Shipley on 10/11/12.
-//  Copyright (c) 2012 Joey Shipley. All rights reserved.
-//
-
 #ifndef __tic_tac_toe_cpp__Structs__
 #define __tic_tac_toe_cpp__Structs__
 
@@ -42,6 +34,9 @@ class DTO
         static Move * BuildMove(Cell cell);
         static Game * BuildGame(vector<Cell> cells, string message);
         static Game * BuildGame(vector<Cell> cells, string message, string winner);
+
+    private:
+        static void populateMoves(Game * game, vector<Cell> cells);
 };
 
 #endif /* defined(__tic_tac_toe_cpp__Structs__) */

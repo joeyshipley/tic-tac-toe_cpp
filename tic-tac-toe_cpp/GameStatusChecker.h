@@ -23,6 +23,7 @@ class GameStatusChecker : public GameStatusAlgorithm
         string checkWinnerFromSet(vector<Cell> set);
         bool shouldContinueChecking(string winner);
         bool isGameOver(string winner);
+        bool ownerHasFullSet(vector<Cell> set, string owner);
 };
 
 #endif /* defined(__tic_tac_toe_cpp__GameStatusChecker__) */

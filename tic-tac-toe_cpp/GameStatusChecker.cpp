@@ -81,26 +81,24 @@ vector<Cell> GameStatusChecker::buildSetFrom(Board * board, Coord first, Coord s
 
 string GameStatusChecker::checkWinnerFromSet(vector<Cell> set)
 {
-    long required = set.size();
-    long validCount = 0;
-    long playerCount = 0;
-    long computerCount = 0;
-    
-    for(int i = 0; i < set.size(); i++)
-    {
-        if(set[i].IsValid)
-            validCount++;
-        if(set[i].Owner == Rules::PLAYER)
-            playerCount++;
-        if(set[i].Owner == Rules::COMPUTER)
-            computerCount++;
-    }
-    
-    if(playerCount == required)
+
+    if(ownerHasFullSet(set, Rules::PLAYER))
         return Rules::PLAYER;
     
-    if(computerCount == required)
+    if(ownerHasFullSet(set, Rules::COMPUTER))
         return Rules::COMPUTER;
-
+    
     return Rules::NONE;
+}
+
+bool GameStatusChecker::ownerHasFullSet(vector<Cell> set, string owner)
+{
+    long requiredCount = set.size();
+    
+    long count = 0;
+    for(int i = 0; i < set.size(); i++)
+        if(set[i].Owner == owner)
+            count += 1;
+            
+    return count == requiredCount;
 }

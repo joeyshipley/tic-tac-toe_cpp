@@ -26,8 +26,15 @@ Game * DTO::BuildGame(vector<Cell> cells, string message, string winner)
     Game * game = new Game();
     game->Message = message;
     game->Winner = winner;
+    populateMoves(game, cells);
+    
+    return game;
+}
+
+void DTO::populateMoves(Game * game, vector<Cell> cells)
+{
     game->Moves = vector<Move>(cells.size());
     for(int i = 0; i < cells.size(); i++)
         game->Moves[i] = * DTO::BuildMove(cells[i]);
-    return game;
+    
 }

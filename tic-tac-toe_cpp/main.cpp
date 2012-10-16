@@ -15,9 +15,8 @@
 
 using namespace std;
 
-ConsoleRunner * buildConsoleRunner()
+ConsoleRunner * buildConsoleRunner(IO * io)
 {
-    IO * io = new ConsoleIO();
     Board * board = new ThreeByThreeBoard();
     InputValidator * validator = new PlayerInputValidator();
     GameStatusAlgorithm * status = new GameStatusChecker();
@@ -30,8 +29,15 @@ ConsoleRunner * buildConsoleRunner()
 
 int main(int argc, char **argv)
 {
-    ConsoleRunner * runner = buildConsoleRunner();
-    runner->Go();
+    IO * io = new ConsoleIO();
+    ConsoleRunner * runner = buildConsoleRunner(io);
+
+    while(true)
+    {
+        runner->Go();
+        io->Output("Press [anykey] to play again. [CTRL + C] to quit.");
+        io->Input();
+    }
  
     delete runner;
     return 0;

@@ -2,9 +2,6 @@
 
 string GameStatusChecker::Check(Board * board)
 {
-    if(!board->HasAvailableMoves())
-        return Rules::TIE;
-        
     string winner = Rules::NONE;
     vector<Cell> cells = board->Cells();
     for(int i = 0; i < cells.size(); i++)
@@ -14,6 +11,9 @@ string GameStatusChecker::Check(Board * board)
             return winner;
     }
 
+    if(!board->HasAvailableMoves())
+        return Rules::TIE;
+        
     return Rules::NONE;
 }
 

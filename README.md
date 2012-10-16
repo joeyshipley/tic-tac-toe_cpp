@@ -1,7 +1,7 @@
 Welcome to Tic-Tac-Toe
 ======================
 
-This is a tic-tac-toe game using utilizing a negamax algorithm.
+This is a tic-tac-toe game utilizing a negamax algorithm.
 
 ***Info***
 

@@ -34,10 +34,10 @@ void NegaMaxAi::calculateBestScore(int move, int score)
 
 int NegaMaxAi::scoreMove(int depth, string winner)
 {
-    if(winner == Rules::COMPUTER)
+    if(winner == Rules::COMPUTER_WON)
         return 1 * depth;
         
-    if(winner == Rules::PLAYER)
+    if(winner == Rules::PLAYER_WON)
         return -1 * depth;
         
     return 0;
@@ -54,7 +54,7 @@ int NegaMaxAi::negamax(Board * board, int move, int depth, string owner, int neg
     copy->Apply(move, owner);
     string winner = status->Check(copy);
     
-    if(winner != Rules::NONE)
+    if(winner != Rules::INPROGRESS)
     {
         delete copy;
         return scoreMove(depth, winner);

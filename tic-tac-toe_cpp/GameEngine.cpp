@@ -30,7 +30,7 @@ Game * GameEngine::PerformTurn(int input)
 bool GameEngine::IsGameOver()
 {
     string winner = status->Check(board);
-    return winner != Rules::NONE;
+    return winner != Rules::INPROGRESS;
 }
 
 Game * GameEngine::CurrentState()
@@ -50,7 +50,7 @@ void GameEngine::performPlayersTurn(int input)
 
 bool GameEngine::shouldPerformComputersTurn()
 {
-    return status->Check(board) == Rules::NONE;
+    return status->Check(board) == Rules::INPROGRESS;
 }
 
 void GameEngine::performComputersTurn()

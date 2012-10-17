@@ -124,7 +124,7 @@ Context(WhenTheConsoleRunnerPerformsItsLoop)
         board->Initialize();
 
         board->Apply(1, Rules::PLAYER);
-        Game * game = DTO::BuildGame(board->Cells(), Rules::VALID, Rules::COMPUTER);
+        Game * game = DTO::BuildGame(board->Cells(), Rules::VALID, Rules::COMPUTER_WON);
         engine->AndReturnsForPerformTurn(game);
         engine->AndReturnsForCurrentState(game);
 

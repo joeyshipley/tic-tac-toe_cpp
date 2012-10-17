@@ -27,7 +27,7 @@ Context(WhenCheckingForAWinner)
     Spec(ItConfirmsThatNoOneHasWon)
     {
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::NONE));
+        Assert::That(winner, Is().EqualTo(Rules::INPROGRESS));
     }
     
     Spec(ItConfirmsThatTheGameIsATie)
@@ -54,7 +54,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(3, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheMiddleRow)
@@ -64,7 +64,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(6, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheBottomRow)
@@ -74,7 +74,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheLeftColumn)
@@ -84,7 +84,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(7, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheCenterColumn)
@@ -94,7 +94,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(8, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheRightColumn)
@@ -104,7 +104,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheTopLeftStartingDiagonal)
@@ -114,7 +114,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 
     Spec(ItConfirmsThePlayerCanWinFromTheBottomLeftStartingDiagonal)
@@ -124,7 +124,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(3, Rules::PLAYER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
       
     Spec(ItConfirmsTheComputerCanWinFromTheTopRow)
@@ -134,7 +134,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(3, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheMiddleRow)
@@ -144,7 +144,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(6, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheBottomRow)
@@ -154,7 +154,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheLeftColumn)
@@ -164,7 +164,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(7, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheCenterColumn)
@@ -174,7 +174,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(8, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheRightColumn)
@@ -184,7 +184,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheTopLeftStartingDiagonal)
@@ -194,7 +194,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(9, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 
     Spec(ItConfirmsTheComputerCanWinFromTheBottomLeftStartingDiagonal)
@@ -204,7 +204,7 @@ Context(WhenCheckingForAWinner)
         board->Apply(3, Rules::COMPUTER);
 
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::COMPUTER));
+        Assert::That(winner, Is().EqualTo(Rules::COMPUTER_WON));
     }
 };
 
@@ -239,6 +239,6 @@ Context(WhenTheASpecificSetOfMovesHasBeenPlayedLeavingThePlayerTheWinnerItDoesNo
         board->Apply(7, Rules::PLAYER);
         
         string winner = statusChecker->Check(board);
-        Assert::That(winner, Is().EqualTo(Rules::PLAYER));
+        Assert::That(winner, Is().EqualTo(Rules::PLAYER_WON));
     }
 };

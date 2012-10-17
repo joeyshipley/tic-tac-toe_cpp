@@ -114,7 +114,7 @@ Context(WhenPerformingATurn)
     Spec(ItPerformsTheComputersMoveIfTheGameWasNotWonByThePlayer)
     {
         validator->AndReturnsForCheck(Rules::VALID);
-        status->AndReturnsForCheck(Rules::NONE);
+        status->AndReturnsForCheck(Rules::INPROGRESS);
         
         engine->PerformTurn(1);
         Assert::That(ai->NextTimesCalled, Is().EqualTo(1));
@@ -125,7 +125,7 @@ Context(WhenPerformingATurn)
     Spec(ItChecksToSeeIfTheComputerWonAfterItMakesItsMove)
     {
         validator->AndReturnsForCheck(Rules::VALID);
-        status->AndReturnsForCheck(Rules::NONE);
+        status->AndReturnsForCheck(Rules::INPROGRESS);
         
         engine->PerformTurn(1);
         Assert::That(status->CheckTimesCalled, Is().EqualTo(2));
@@ -160,14 +160,14 @@ Context(WhenAskingIfTheGameIsOver)
     
     Spec(ItLetsUsKnowThatItIsOverIfThePlayerHasWon)
     {
-        status->AndReturnsForCheck(Rules::PLAYER);
+        status->AndReturnsForCheck(Rules::PLAYER_WON);
         bool isGameOver = engine->IsGameOver();
         Assert::That(isGameOver, Is().True());
     }
 
     Spec(ItLetsUsKnowThatItIsOverIfTheComputerHasWon)
     {
-        status->AndReturnsForCheck(Rules::COMPUTER);
+        status->AndReturnsForCheck(Rules::COMPUTER_WON);
         bool isGameOver = engine->IsGameOver();
         Assert::That(isGameOver, Is().True());
     }
@@ -181,7 +181,7 @@ Context(WhenAskingIfTheGameIsOver)
     
     Spec(ItLetsUsKnowThatItIsNotOverWhenItsStillGoing)
     {
-        status->AndReturnsForCheck(Rules::NONE);
+        status->AndReturnsForCheck(Rules::INPROGRESS);
         bool isGameOver = engine->IsGameOver();
         Assert::That(isGameOver, Is().False());
     }

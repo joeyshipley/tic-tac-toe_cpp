@@ -2,7 +2,7 @@
 
 string GameStatusChecker::Check(Board * board)
 {
-    string winner = Rules::NONE;
+    string winner = Rules::INPROGRESS;
     vector<Cell> cells = board->Cells();
     for(int i = 0; i < cells.size(); i++)
     {
@@ -14,22 +14,22 @@ string GameStatusChecker::Check(Board * board)
     if(!board->HasAvailableMoves())
         return Rules::TIE;
         
-    return Rules::NONE;
+    return Rules::INPROGRESS;
 }
 
 bool GameStatusChecker::isGameOver(string winner)
 {
-    return winner != Rules::NONE;
+    return winner != Rules::INPROGRESS;
 }
 
 bool GameStatusChecker::shouldContinueChecking(string winner)
 {
-    return winner == Rules::NONE;
+    return winner == Rules::INPROGRESS;
 }
 
 string GameStatusChecker::checkWinnerFromPossibleWinningSets(Board * board, int x, int y)
 {
-    string winner = Rules::NONE;
+    string winner = Rules::INPROGRESS;
 
     if(shouldContinueChecking(winner))
         winner = checkWinnerFromRow(board, x, y);
@@ -83,12 +83,12 @@ string GameStatusChecker::checkWinnerFromSet(vector<Cell> set)
 {
 
     if(ownerHasFullSet(set, Rules::PLAYER))
-        return Rules::PLAYER;
+        return Rules::PLAYER_WON;
     
     if(ownerHasFullSet(set, Rules::COMPUTER))
-        return Rules::COMPUTER;
+        return Rules::COMPUTER_WON;
     
-    return Rules::NONE;
+    return Rules::INPROGRESS;
 }
 
 bool GameStatusChecker::ownerHasFullSet(vector<Cell> set, string owner)

@@ -35,10 +35,10 @@ string ResponseFormatter::Thinking()
 
 string ResponseFormatter::GameOver(string winner)
 {
-    if(winner == Rules::PLAYER)
+    if(winner == Rules::PLAYER_WON)
         return "You won! Holy crap, that really wasn't supposed to be able to happen...";
         
-    if(winner == Rules::COMPUTER)
+    if(winner == Rules::COMPUTER_WON)
         return "Fail! You lost!";
         
     if(winner == Rules::TIE)

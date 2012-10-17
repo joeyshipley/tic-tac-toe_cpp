@@ -53,13 +53,13 @@ Context(WhenFormattingTheResponse)
     
     Spec(ItDisplaysTheYouWinnerMessageIfYouWinTheGame)
     {
-        string message = formatter->GameOver(Rules::PLAYER);
+        string message = formatter->GameOver(Rules::PLAYER_WON);
         Assert::That(message.find("won"), Is().Not().EqualTo(-1));
     }
     
     Spec(ItDisplaysTheYouLooseMessageIfYouLost)
     {
-        string message = formatter->GameOver(Rules::COMPUTER);
+        string message = formatter->GameOver(Rules::COMPUTER_WON);
         Assert::That(message.find("lost"), Is().Not().EqualTo(-1));
     }
     
